@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="filters" style="max-width: 200px;">
+                    <select class="form-control" name="filter" [(ngModel)]="sort" (change)="searchGames(sort)">
+                        <option value="name">Name</option>
+                        <option value="-released">Released</option>
+                        <option value="-added">Added</option>
+                        <option value="-created">Created</option>
+                        <option value="-updated">Updated </option>
+                        <option value="-rating">Rating</option>
+                        <option value="metacritic">Metacritic</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-4" *ngFor="let game of games">
+                <div class="card" (click)="openGameDetails(game.id)">
+                    <img src="{{game.background_image}}" class="card-img-top" alt="..." *ngIf="game.background_image">
+                    <img src="https://images.pexels.com/photos/8832898/pexels-photo-8832898.jpeg" class="card-img-top" *ngIf="!game.background_image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{game.name}}</h5>
+                        <img class="img-fluid platform-img" *ngFor="let gp of game.parent_platforms" src="assets/images/platforms/{{gp.platform.slug}}.svg">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+.game-gauge {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 8px solid #ffffff52;
+    border-radius: 100%;
+    border-bottom: 10px solid #0d1117;
+}
+
+.getColor {}
+
+.meta-crictic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.nav-link {
+    background-color: black !important;
+    border: 1px solid #fff !important;
+    margin: 10px 20px;
+    color: #fff;
+}

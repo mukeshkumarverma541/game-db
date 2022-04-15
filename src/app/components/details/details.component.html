@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="banner-image">
+                    <img src="{{game.background_image}}" class="img-fluid mb-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="meta-header">
+                    <h1 class="title">{{game.name}}</h1>
+                    <p class="release-date">Release : {{game.released | date}}</p>
+                    <p class="geners">
+                        <ng-container *ngFor="let genre of game.genres; let last = last;">
+                            <span> {{genre.name}} </span>
+                            <span *ngIf="!last">,</span>
+                        </ng-container>
+                    </p>
+
+                    <ngx-gauge [value]="gameRating" [size]="100" [label]="gaugeLabel">
+                    </ngx-gauge>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-game-tabs [game]="game"></app-game-tabs>

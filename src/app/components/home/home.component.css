@@ -1,0 +1,12 @@
+select {
+    color: #000;
+}
+
+.platform-img {
+    width: 25px;
+    margin-right: 11px;
+}
+
+.card {
+    background-color: black;
+}
